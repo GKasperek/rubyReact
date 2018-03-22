@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gautier Découverte</title>
+
+    <ul id="menu">
+      <li><a href="pages/home"> Event planner </a></li>
+      <li><a href="pages/home">Accueil</a></li>
+      <li><a href="/books">Premiers livres</a></li>
+      <li><a href="/events">Gestionnaire d'évènement</a></li>
+    </ul>
+    <%= csrf_meta_tags %>
+
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  </br>
+  </br>
+  </br>
+    <%= yield %>
+  </body>
+</html>

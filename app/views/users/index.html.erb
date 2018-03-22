@@ -1,0 +1,43 @@
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+<h2>Après-midi Football !</h2>
+
+<p><a href="/adduser">Inscrivez-vous !</a></p>
+
+<% i = 1 %>
+<table>
+    <tr>
+      <th>Id</th>
+      <th>Prénom</th>
+      <th>Nom</th>
+      <th>Email</th>
+      <th>Téléphone</th>
+    </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <th><a href="/users/<%= user.id %>"><%= i %></a></th>
+      <th><a href="/users/<%= user.id %>"><%= user.name %></a></th>
+      <th><a href="/users/<%= user.id %>"><%= user.firstname %></a></th>
+      <th><a href="/users/<%= user.id %>"><%= user.email %></a></th>
+      <th><a href="/users/<%= user.id %>"><%= user.telephone %></a></th>
+    </tr>
+    <% i = i + 1 %>
+  <% end %>
+
+</table>

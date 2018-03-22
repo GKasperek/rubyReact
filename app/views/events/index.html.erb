@@ -1,0 +1,45 @@
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+<h2>Liste des événements !</h2>
+
+<p><a href="/addevent">Créez un évènement !</a></p>
+
+<% i = 1 %>
+<table>
+    <tr>
+      <th>Id</th>
+      <th>Nom de l'évènement</th>
+      <th>Début</th>
+      <th>Fin</th>
+      <th>Inscrit(s)</th>
+      <th>Participants maximum</th>
+    </tr>
+  <% @events.each do |event| %>
+    <tr>
+      <th><a href="/events/<%= event.id %>"><%= i %></a></th>
+      <th><a href="/events/<%= event.id %>"><%= event.name %></a></th>
+      <th><a href="/events/<%= event.id %>"><%= event.begin %></a></th>
+      <th><a href="/events/<%= event.id %>"><%= event.end %></a></th>
+      <th><a href="/events/<%= event.id %>"> 0 </a></th>
+      <th><a href="/events/<%= event.id %>"><%= event.max %></a></th>
+    </tr>
+    <% i = i + 1 %>
+  <% end %>
+
+</table>

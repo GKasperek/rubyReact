@@ -1,0 +1,12 @@
+<h2>Bienvenue</h2>
+<p>Ceci est une variable <%= @variable%>.</p>
+
+<% if @variable == 42 %>
+  Super, la variable vaut 42 !
+<% else  %>
+  Différent de 42 !
+<% end %>
+
+<% @variable.times do |i| %>
+  <%= i %>
+<% end %>

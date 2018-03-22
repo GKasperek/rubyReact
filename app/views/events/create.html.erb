@@ -1,0 +1,18 @@
+<h2> Créer un évènement</h2>
+
+<%= form_tag "/addevent", method: "post" do %>
+  <label>Nom : </label> <input type="text" name="name" /></br>
+  <label>Début : </label> <input type="date" name="begin" /></br>
+  <label>Fin : </label><input type="date" name="end" /></br>
+  <label>Nombre de participants : </label><input type="number" name="max" /></br>
+</br>
+  <div>
+      <input type="checkbox" id="suscribe" name="check" value="true">
+      <label for="suscribe"> Accepter les conditions d'utilisations ? <label>
+  </div>
+  <label id="hidden" style="display:none"> Vous devez accepter les conditions d'utilisations </label>
+</br>
+  <input type="submit" value="Ajouter l'évènement" onclick="display()"/>
+<% end %>
+
+<p><a href="/users"> Liste des évènement</a></p>

@@ -1,0 +1,30 @@
+<h2> S'inscrire à l'évènement</h2>
+
+<%= form_tag "/adduser", method: "post" do %>
+  <label>Prénom : </label> <input type="text" name="name" /></br>
+  <label>Nom : </label> <input type="text" name="firstname" /></br>
+  <label>Email : </label><input type="text" name="email" /></br>
+  <label>Téléphone : </label><input type="text" name="telephone" /></br>
+</br>
+  <div>
+      <input type="checkbox" id="suscribe" name="check" value="true">
+      <label for="suscribe"> Accepter les conditions d'utilisations ? <label>
+  </div>
+  <label id="hidden" style="display:none"> Vous devez accepter les conditions d'utilisations </label>
+</br>
+  <input type="submit" value="Ajouter le l'utilisateur" onclick="display()"/>
+<% end %>
+
+<p><a href="/users"> Liste des participants</a></p>
+
+
+<script language="JavaScript">
+   function display(){
+     if(document.getElementById('suscribe').checked){
+       document.getElementById("hidden").style.display = "none";
+     }
+     else{
+       document.getElementById("hidden").style.display ="block";
+     }
+   }
+</script>
