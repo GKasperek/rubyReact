@@ -29,7 +29,7 @@ Ce site est une première découverte de _Ruby_ et de son _Framework Ruby on Rai
   
   * Users(*@id_user* : _int_, name : _string_, firstname : _string_, email : _string_, phone : _string_)
   * Events(*@id_event* : _int_, name : _string_, begin : _datetime_, end : _end_, capacity : _int_)
-  * Users_at_event(*#id_event*, *#id_user*)
+  * Users_at_event(*@id_event_user*, *#id_event*, *#id_user*)
   
   
 
